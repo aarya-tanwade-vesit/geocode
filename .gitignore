@@ -1,0 +1,30 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.venv/
+venv/
+env/
+ENV/
+
+# Environment variables / secrets
+.env
+.env.*
+
+# VS Code
+.vscode/
+
+# Godot
+.godot/
+*.import
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs / generated output
+*.log
+
+# Generated reports / test output
+output/
+results/
