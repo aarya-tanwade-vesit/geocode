@@ -9,6 +9,10 @@ size = Vector3(3, 0.3, 3)
 top_radius = 0.2
 bottom_radius = 0.2
 
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_g4v7s"]
+radius = 0.16748047
+height = 1.362793
+
 [node name="FSOC_camera" type="Node3D" unique_id=678016351]
 script = ExtResource("1_8x4pb")
 
@@ -19,8 +23,14 @@ mesh = SubResource("BoxMesh_g4v7s")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.80081934, 0)
 mesh = SubResource("CylinderMesh_g4v7s")
 
-[node name="Pivot" type="CSGBox3D" parent="pivot" unique_id=604575366]
+[node name="Pan" type="CSGBox3D" parent="pivot" unique_id=604575366]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 
-[node name="Camera3D" type="Camera3D" parent="pivot/Pivot" unique_id=1657518576]
+[node name="Tilt" type="Node3D" parent="pivot/Pan" unique_id=336126672]
+
+[node name="Camera3D" type="Camera3D" parent="pivot/Pan/Tilt" unique_id=1657518576]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.36055827)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="pivot/Pan/Tilt/Camera3D" unique_id=1165594960]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0.043902874, -0.62688)
+mesh = SubResource("CapsuleMesh_g4v7s")
