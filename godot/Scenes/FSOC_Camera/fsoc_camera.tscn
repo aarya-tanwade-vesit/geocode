@@ -1,3 +1,23 @@
 [gd_scene format=3 uid="uid://bvua2cn3e4iid"]
 
+[sub_resource type="BoxMesh" id="BoxMesh_g4v7s"]
+size = Vector3(3, 0.3, 3)
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_g4v7s"]
+top_radius = 0.2
+bottom_radius = 0.2
+
+[sub_resource type="BoxMesh" id="BoxMesh_57qmd"]
+
 [node name="FSOC_camera" type="Node3D" unique_id=678016351]
+
+[node name="Base" type="MeshInstance3D" parent="." unique_id=1975868581]
+mesh = SubResource("BoxMesh_g4v7s")
+
+[node name="pivot" type="MeshInstance3D" parent="." unique_id=1636283366]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.80081934, 0)
+mesh = SubResource("CylinderMesh_g4v7s")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="pivot" unique_id=704636211]
+transform = Transform3D(0.0430273, 0.9990739, 0, -0.9990739, 0.0430273, 0, 0, 0, 1, 0, 1.1726313, 0)
+mesh = SubResource("BoxMesh_57qmd")
