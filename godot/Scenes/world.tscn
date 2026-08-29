@@ -16,6 +16,8 @@ sky = SubResource("Sky_a02cp")
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_g4v7s"]
 albedo_color = Color(0.018988507, 0.0077489936, 0.074264266, 1)
 
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_g4v7s"]
+
 [node name="World" type="Node3D" unique_id=1634765580]
 script = ExtResource("1_a02cp")
 
@@ -29,3 +31,7 @@ environment = SubResource("Environment_go701")
 [node name="Platform" type="CSGBox3D" parent="." unique_id=1752531746]
 size = Vector3(10.15918, 1, 10.506836)
 material = SubResource("StandardMaterial3D_g4v7s")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1437743592]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
+mesh = SubResource("CapsuleMesh_g4v7s")
