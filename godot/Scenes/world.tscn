@@ -17,11 +17,6 @@ sky = SubResource("Sky_a02cp")
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_g4v7s"]
 albedo_color = Color(0.018988507, 0.0077489936, 0.074264266, 1)
 
-[sub_resource type="CylinderMesh" id="CylinderMesh_g4v7s"]
-top_radius = 1.2749023
-bottom_radius = 1.2749023
-height = 0.8105469
-
 [node name="World" type="Node3D" unique_id=1634765580]
 script = ExtResource("1_a02cp")
 
@@ -38,9 +33,5 @@ material = SubResource("StandardMaterial3D_g4v7s")
 
 [node name="FSOC_camera" parent="." unique_id=678016351 instance=ExtResource("2_go701")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=768136194]
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 2.4286928, -11.577911)
-mesh = SubResource("CylinderMesh_g4v7s")
 
 [editable path="FSOC_camera"]
