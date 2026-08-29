@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://btrnbhhfn8vju"]
+
+[ext_resource type="Script" uid="uid://ci84jetp4mhnb" path="res://Scripts/world.gd" id="1_a02cp"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_yp4wr"]
+sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+ground_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+
+[sub_resource type="Sky" id="Sky_a02cp"]
+sky_material = SubResource("ProceduralSkyMaterial_yp4wr")
+
+[sub_resource type="Environment" id="Environment_go701"]
+background_mode = 2
+sky = SubResource("Sky_a02cp")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_g4v7s"]
+albedo_color = Color(0.018988507, 0.0077489936, 0.074264266, 1)
+
+[node name="World" type="Node3D" unique_id=1634765580]
+script = ExtResource("1_a02cp")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=335832514]
+transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 0, 0)
+shadow_enabled = true
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1046966433]
+environment = SubResource("Environment_go701")
+
+[node name="Platform" type="CSGBox3D" parent="." unique_id=1752531746]
+size = Vector3(10.15918, 1, 10.506836)
+material = SubResource("StandardMaterial3D_g4v7s")
