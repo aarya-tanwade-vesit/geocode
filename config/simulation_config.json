@@ -1,0 +1,43 @@
+{
+  "target": {
+    "initial_position": [0.0, 0.0, 100.0],
+    "velocity": [1.0, 0.5, 0.0],
+    "trajectory_type": "linear",
+    "circular_radius": 10.0,
+    "circular_speed": 0.5
+  },
+  "platform_disturbance": {
+    "vibration_frequency_hz": 15.0,
+    "vibration_amplitude": 0.05,
+    "drift_frequency_hz": 0.2,
+    "drift_amplitude": 0.2
+  },
+  "image_degradation": {
+    "gaussian_noise_std": 10.0,
+    "salt_pepper_prob": 0.005,
+    "motion_blur_kernel_size": 5,
+    "turbulence_strength": 0.3,
+    "visibility": 1.0
+  },
+  "scenarios": {
+    "no_disturbance": {
+      "vibration": false,
+      "noise": false,
+      "blur": false,
+      "turbulence": false
+    },
+    "high_noise": {
+      "gaussian_noise_std": 25.0,
+      "salt_pepper_prob": 0.02,
+      "turbulence_strength": 0.6
+    },
+    "high_vibration": {
+      "vibration_amplitude": 0.2,
+      "motion_blur_kernel_size": 11
+    },
+    "sudden_maneuver": {
+      "maneuver_time_s": 5.0,
+      "maneuver_impulse": [5.0, -3.0, 0.0]
+    }
+  }
+}

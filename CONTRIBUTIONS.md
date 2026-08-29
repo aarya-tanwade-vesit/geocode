@@ -107,28 +107,28 @@ Frame → Detection → Tracking → Error → Control → Pan/Tilt
 
 ### Target Motion
 
-- [ ] Implement configurable target velocity
-- [ ] Implement different target trajectories
-- [ ] Implement direction changes
-- [ ] Implement sudden target movement
+- [x] Implement configurable target velocity
+- [x] Implement different target trajectories
+- [x] Implement direction changes
+- [x] Implement sudden target movement
 
 ### Disturbances
 
-- [ ] Camera/platform vibration
-- [ ] Camera motion disturbance
-- [ ] Image noise
-- [ ] Blur / visibility degradation
-- [ ] Atmospheric turbulence approximation
-- [ ] Adjustable disturbance intensity
+- [x] Camera/platform vibration
+- [x] Camera motion disturbance
+- [x] Image noise
+- [x] Blur / visibility degradation
+- [x] Atmospheric turbulence approximation
+- [x] Adjustable disturbance intensity
 
 ### Test Scenarios
 
-- [ ] No disturbance
-- [ ] Moving target
-- [ ] High noise
-- [ ] High vibration
-- [ ] Sudden disturbance
-- [ ] Target loss and recovery
+- [x] No disturbance
+- [x] Moving target
+- [x] High noise
+- [x] High vibration
+- [x] Sudden disturbance
+- [x] Target loss and recovery
 
 ### Main Goal
 Make the simulation configurable and difficult enough to properly test the PAT system.
