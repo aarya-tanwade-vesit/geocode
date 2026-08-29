@@ -1,5 +1,7 @@
 [gd_scene format=3 uid="uid://bvua2cn3e4iid"]
 
+[ext_resource type="Script" uid="uid://b2c3ee4fj00os" path="res://Scenes/FSOC_Camera/fsoc_camera.gd" id="1_8x4pb"]
+
 [sub_resource type="BoxMesh" id="BoxMesh_g4v7s"]
 size = Vector3(3, 0.3, 3)
 
@@ -7,9 +9,8 @@ size = Vector3(3, 0.3, 3)
 top_radius = 0.2
 bottom_radius = 0.2
 
-[sub_resource type="BoxMesh" id="BoxMesh_57qmd"]
-
 [node name="FSOC_camera" type="Node3D" unique_id=678016351]
+script = ExtResource("1_8x4pb")
 
 [node name="Base" type="MeshInstance3D" parent="." unique_id=1975868581]
 mesh = SubResource("BoxMesh_g4v7s")
@@ -18,6 +19,8 @@ mesh = SubResource("BoxMesh_g4v7s")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.80081934, 0)
 mesh = SubResource("CylinderMesh_g4v7s")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="pivot" unique_id=704636211]
-transform = Transform3D(0.0430273, 0.9990739, 0, -0.9990739, 0.0430273, 0, 0, 0, 1, 0, 1.1726313, 0)
-mesh = SubResource("BoxMesh_57qmd")
+[node name="Pivot" type="CSGBox3D" parent="pivot" unique_id=604575366]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+
+[node name="Camera3D" type="Camera3D" parent="pivot/Pivot" unique_id=1657518576]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.36055827)
