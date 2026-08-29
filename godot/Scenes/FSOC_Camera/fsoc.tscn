@@ -1,28 +1,3 @@
 [gd_scene format=3 uid="uid://4mpglqo0p4kl"]
 
-[sub_resource type="CylinderMesh" id="CylinderMesh_g4v7s"]
-top_radius = 3.0
-bottom_radius = 3.0
-height = 0.16503906
-
-[sub_resource type="CylinderMesh" id="CylinderMesh_xfjjf"]
-top_radius = 0.3
-bottom_radius = 0.3
-height = 3.665039
-
-[sub_resource type="CapsuleMesh" id="CapsuleMesh_gxova"]
-radius = 0.7
-height = 2.8203125
-
 [node name="FSOC" type="Node3D" unique_id=986367640]
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1009898420]
-mesh = SubResource("CylinderMesh_g4v7s")
-
-[node name="MeshInstance3D2" type="MeshInstance3D" parent="." unique_id=895719849]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.83251953, 0)
-mesh = SubResource("CylinderMesh_xfjjf")
-
-[node name="MeshInstance3D3" type="MeshInstance3D" parent="." unique_id=1167121928]
-transform = Transform3D(0.07843116, 0.9969195, 0, -0.9969195, 0.07843116, 0, 0, 0, 1, 0.24144143, 2.9335725, 0)
-mesh = SubResource("CapsuleMesh_gxova")
