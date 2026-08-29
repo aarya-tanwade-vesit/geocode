@@ -3,8 +3,14 @@
 [sub_resource type="BoxMesh" id="BoxMesh_g4v7s"]
 size = Vector3(6.173584, 1, 4.34375)
 
+[sub_resource type="PrismMesh" id="PrismMesh_g4v7s"]
+
 [node name="FSOC" type="Node3D" unique_id=986367640]
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1556090215]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.12548828, 0, 0)
 mesh = SubResource("BoxMesh_g4v7s")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="." unique_id=1437137903]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 0)
+mesh = SubResource("PrismMesh_g4v7s")
